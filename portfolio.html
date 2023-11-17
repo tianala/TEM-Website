@@ -1,42 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Navigation Menu</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Your Professional Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Embedded styles for demonstration purposes */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Work Sans', Arial, sans-serif;
+        }
+
+        /* Additional styling for demonstration purposes */
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .search-bar {
+            position: relative;
+            display: inline-block;
+        }
+
+        .suggestions {
+            margin-top: 20px;
+        }
+
+        .suggestion-item {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .suggestion-item:hover {
+            transform: scale(1.1);
+        }
+
+        .search-input,
+        .search-button {
+            height: 40px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #75928f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 5px;
+        }
+
+        .search-button:hover {
+            background-color: #845bb3;
+        }
+
+        /* Style for the login/sign-up buttons */
+        .auth-link {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #7dc38e; /* Pastel green color */
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            background-color: #7dc38e; /* Light green background */
+            color: #fff; /* Text color */
+            text-decoration: none;
+        }
+
+        .auth-link:hover {
+            background-color: #5c9b6e; /* Darker green color on hover */
+            border-color: #5c9b6e;
+        }
+    </style>
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
             <h1>Recreatehub</h1>
         </div>
-        <div class="navigation">
+        <nav class="menu-container">
             <ul class="menu">
-                <li><a href="#" class="nav-link">Home</a></li>
-                <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-        </div>
-        <div class="auth-section">
-            <a href="#" class="auth-link">Log In</a>
-            <span class="divider">|</span>
-            <a href="#" class="auth-link">Sign Up</a>
+        </nav>
+        <div class="auth-links">
+            <div class="auth-link">
+                <a href="#">Login</a>
+            </div>
+            <div class="auth-link">
+                <a href="#">Sign Up</a>
+            </div>
         </div>
     </header>
 
+    <main>
+        <h2>Find specific item to recycle</h2>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="search-button">Search</button>
+        </div>
 
-  <div class="box">
-    <input type="checkbox" id="check">
-    <div class="search-box">
-      <input type="text" placeholder="Type here...">
-      <label for="check" class="icon">
-        <i class="fas fa-search"></i>
-      </label>
-    </div>
-  </div>
-<!-- ... (existing HTML) -->
+        <div class="suggestions">
+            <div class="suggestion-item">Clothes</div>
+            <div class="suggestion-item">Bottles</div>
+            <div class="suggestion-item">Papers</div>
+            <div class="suggestion-item">Plastics</div>
+            <!-- Add more suggestion items as needed -->
+        </div>
+
+        <!-- Other content goes here -->
+
+    </main>
+
+    <!-- Additional HTML content if needed -->
 
 </body>
+
 </html>
