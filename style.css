@@ -1,4 +1,3 @@
-/* CSS */
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +5,11 @@
 }
 
 body {
-    background: linear-gradient(to right, rgb(159, 239, 183), #ffffff);
-    font-family: 'Work Sans', Arial, sans-serif;
-    background: linear-gradient(to left);
+    background-image: url('https://img.freepik.com/premium-photo/variety-eco-bags-shopping-bags-green-background_573856-99.jpg?w=1060');
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif; 
 }
+
 
 .header {
     display: flex;
@@ -61,6 +61,7 @@ body {
     list-style-type: none;
     display: flex;
     padding: 10px 20px;
+    font-weight: 700;
     
 }
 
@@ -102,7 +103,11 @@ body {
 
 /* ... (existing CSS) */
 
-.search-bar {
+/* ... (existing CSS) */
+
+/* ... (existing CSS) */
+
+.search-container {
     text-align: left;
     position: fixed;
     top: 50%;
@@ -112,13 +117,12 @@ body {
     align-items: center;
 }
 
-
 .search-input {
     padding: 15px;
     font-size: 18px;
     border: 1px solid #ccc;
-    border-radius: 15px;
-    width: 500px;
+    border-radius: 15px 0 0 15px; /* Adjust border-radius for a rounded corner on the left */
+    width: 600px; /* Adjust the width as needed */
     text-align: center;
 }
 
@@ -128,10 +132,9 @@ body {
     background-color: #75928f;
     color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 0 15px 15px 0; /* Adjust border-radius for a rounded corner on the right */
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: 5px; /* Add a small gap between the search bar and search button */
 }
 
 .search-button:hover {
@@ -139,55 +142,10 @@ body {
     transition: background-color 0.3s;
 }
 
-/* .box{
-    max-width: 400px;
-    width: 100%;
-  }
-  .box .search-box{
-    position: relative;
-    height: 50px;
-    max-width: 50px;
-    margin: auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    transition: all 0.3s ease;
-  }
-  #check:checked ~ .search-box{
-    max-width: 380px;
-  }
-  .search-box input{
-   position: absolute;
-   height: 100%;
-   width: 100%;
-   border-radius: 25px;
-   background: #fff;
-   outline: none;
-   border: none;
-   padding-left: 20px;
-   font-size: 18px;
-  }
-  .search-box .icon{
-    position: absolute;
-    right: -2px;
-    top: 0;
-    width: 50px;
-    background: #FFF;
-    height: 100%;
-    text-align: center;
-    line-height: 50px;
-    color: #FF676D;
-    font-size: 20px;
-    border-radius: 25px;
-  }
-  #check:checked ~ .search-box .icon{
-    background: #FF676D;
-    color: #FFF;
-    width: 60px;
-    border-radius: 0 25px 25px 0;
-  }
-  #check{
-    display: none;
-  }*/
+/* ... (existing CSS) */
+
+/* ... (existing CSS) */
+
 
 .auth-link {
     display: inline-block;
@@ -204,3 +162,49 @@ body {
 }
 
 /* ... (existing CSS) */
+
+.suggestions {
+    display: flex;
+    justify-content: center;
+    margin-top: 140px; /* Add space between search bar and suggestions */
+}
+
+.suggestion-item {
+        background-color: #89beab; /* Background color */
+        color: #fff; /* Text color */
+        padding: 2px 18px; /* Adjust padding for spacing inside the box */
+        border-radius: 12px 20px 12px 20px; /* Longer corners on both ends */
+        transition: background-color 0.3s;
+        margin-right: 35px;
+        border: 4px solid #89beab; /* Border width, adjust as needed */
+        box-sizing: border-box; /* Include the border in the box model */
+    
+    
+}
+
+
+.suggestion-item:hover {
+    background-color: #67b196; /* Change background color on hover */
+}
+
+.header-title {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-title h2 {
+    font-weight: 1000;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.subtext {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: inherit;
+    line-height: 1.6;
+    margin-top: 10px; /* Adjust the margin as needed */
+    max-width: 600px; /* Set a maximum width to control the width of the paragraph */
+    margin-left: auto;
+    margin-right: auto;
+}
