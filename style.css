@@ -21,22 +21,30 @@ body {
     transition: 0.3s;
 }
 
-.logo h1, .auth-link {
-    color: #000000;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
+.header-title h2 {
+    font-weight: 800; /* Adjusted font weight */
+    font-size: 40px;
+    color: #67b196; /* Consistent color with the logo */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo h1 {
+    color: #67b196;
+    text-decoration: none;
+    font-size: 24px;
     font-weight: bold;
-    font-size: 35px;
+    margin-right: 20px;
 }
 
 .auth-section {
     display: flex;
     align-items: center;
 }
+
 
 .divider {
     color: #fff;
@@ -50,23 +58,34 @@ body {
 
 /* ... (existing CSS) */
 
-.menu-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the menu items horizontally */
-    margin-right: auto; /* Push the menu to the left */
-}
+    .menu-container {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center the menu items horizontally */
+        margin-right: auto; /* Push the menu to the left */
+    }
 
-.menu {
-    list-style-type: none;
-    display: flex;
-    padding: 10px 20px;
-    font-weight: 700;
+    .menu {
+        list-style-type: none;
+        display: flex;
+        padding: 10px 20px;
+        font-weight: 700;
+        
+    }
+
+    .menu li {
+        margin-right: 55px;
+    }
     
-}
+    
+    .menu li.active a {
+        color: #67b196; /* Set the active page color */
+        text-decoration: underline; /* Underline for active link */
+    }
+    
 
-.menu li {
-    margin-right: 55px;
+.menu li.active a {
+    color: #67b196; /* Set the active page color */
 }
 
 .menu li:last-child {
@@ -79,13 +98,13 @@ body {
 
 .menu li a {
     font-size: 18px;
-    color: #000000;
+    color: #67b196;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .menu li a:hover {
-    color: #c9b4e2;
+    color: #67b196;
     transition: color 0.3s;
 }
 
@@ -97,7 +116,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #845bb3;
+    color: #67b196;
     transition: color 0.3s;
 }
 
@@ -108,39 +127,46 @@ body {
 /* ... (existing CSS) */
 
 .search-container {
-    text-align: left;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    display: flex;
-    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
 }
 
 .search-input {
     padding: 15px;
     font-size: 18px;
     border: 1px solid #ccc;
-    border-radius: 15px 0 0 15px; /* Adjust border-radius for a rounded corner on the left */
-    width: 600px; /* Adjust the width as needed */
-    text-align: center;
+    border-radius: 15px; 
+    width: 300px;
 }
 
 .search-button {
-    padding: 15px;
+    padding: 15px 20px;
     font-size: 18px;
     background-color: #75928f;
     color: #fff;
     border: none;
-    border-radius: 0 15px 15px 0; /* Adjust border-radius for a rounded corner on the right */
+    border-radius: 15px; 
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-radius 0.3s; /* Added border-radius to the transition */
 }
 
 .search-button:hover {
-    background-color: #845bb3;
-    transition: background-color 0.3s;
+    background-color: #7dc38e;
+    border-radius: 0; /* Change border-radius on hover */
 }
+
+@media (max-width: 768px) {
+    .search-container {
+        margin-top: 20px;
+    }
+
+    .search-input,
+    .search-button {
+        width: 100%;
+    }
+}
+
 
 /* ... (existing CSS) */
 
@@ -148,17 +174,17 @@ body {
 
 
 .auth-link {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid #7dc38e; /* Pastel green color */
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+display: inline-block;
+padding: 10px 20px;
+border: 2px solid #7dc38e; /* Pastel green color */
+border-radius: 5px;
+transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .auth-link:hover {
-    background-color: #7dc38e; /* Pastel green color on hover */
-    color: #fff; /* Text color on hover */
-    border-color: #fff; /* Border color on hover */
+background-color: #7dc38e; /* Pastel green color on hover */
+color: #fff; /* Text color on hover */
+border-color: #fff; /* Border color on hover */
 }
 
 /* ... (existing CSS) */
@@ -166,25 +192,27 @@ body {
 .suggestions {
     display: flex;
     justify-content: center;
-    margin-top: 140px; /* Add space between search bar and suggestions */
+    margin-top: 20px;
 }
 
 .suggestion-item {
-        background-color: #89beab; /* Background color */
-        color: #fff; /* Text color */
-        padding: 2px 18px; /* Adjust padding for spacing inside the box */
-        border-radius: 12px 20px 12px 20px; /* Longer corners on both ends */
-        transition: background-color 0.3s;
-        margin-right: 35px;
-        border: 4px solid #89beab; /* Border width, adjust as needed */
-        box-sizing: border-box; /* Include the border in the box model */
-    
-    
+    background-color: #75928f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
+.suggestions a{
+    text-decoration: none;
+    color: white
+    ;
+}
 
 .suggestion-item:hover {
-    background-color: #67b196; /* Change background color on hover */
+    background-color: #67b196;
 }
 
 .header-title {
